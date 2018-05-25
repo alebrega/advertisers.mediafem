@@ -1,0 +1,604 @@
+/* =========================== GENERAL ============================ */
+html, body{
+    background-color: #fff;
+    color: #252C2E;
+    font: normal normal .94em 'Calibri', Arial, Helvetica, sans-serif;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+a, a img{
+    border: none;
+    color: #E43B8E;
+    outline: none;
+    text-decoration: none;
+}
+
+h2{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+h2.border_bottom{
+    border-bottom: 1px solid #EEEEEE;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+
+hr{
+    border: none;
+    height: 0;
+}
+
+p{
+    font-size: 0.8em;
+    margin: 5px 0;
+}
+
+.alerta{
+    background: none repeat scroll 0 0 #FEFFD5;
+    border: 1px solid #FDFFB3;
+    margin: 15px 20px 10px;
+    padding: 5px 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.alertaOk{
+    background: none repeat scroll 0 0 #BFFFBF;
+    border: 1px solid #99FF99;
+    margin: 15px 20px 10px;
+    padding: 5px 10px;
+    text-align: center;
+    font-weight: bold;
+    color: green;
+}
+
+.clear{
+    clear: both;
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    clear: both;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 85%;
+}
+
+.floatLeft{ float: left; }
+
+.floatRight{ float: right; }
+
+.row{
+    clear: both;
+    margin-bottom: 15px;
+}
+
+.textCenter{ text-align: center; }
+/* ========================= end GENERAL ========================== */
+
+
+/* ============================ HEADER ============================ */
+header{
+    background-color: #E43B8E;
+    padding: 24px 0;
+}
+
+header #user_nav{
+    background: transparent url(../images/icon_down_pink.png) center right no-repeat;
+    color: #fff;
+    float: right;
+    font-weight: bold;
+    margin-top: 13px;
+    padding-right: 15px;
+}
+/* ========================== end HEADER ========================== */
+
+/* ============================== NAV ============================= */
+nav{
+    background-color: #252D2F;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul li{
+    float: left;
+    margin-top: 13px;
+    margin-right: 60px;
+    padding-bottom: 13px;
+}
+
+nav ul li.active{
+    background: transparent url(../images/icon_up_nav_blank.png) bottom center no-repeat;
+}
+
+nav ul li a{
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav #saldo_disponible{
+    float: right;
+    margin-top: 13px;
+    text-align: right;
+    width: 500px;
+}
+/* ============================ end NAV =========================== */
+
+/* ============================ SECTION =========================== */
+section{
+    margin-top: 40px !important;
+    margin-bottom: 35px !important;
+}
+/* ========================== end SECTION ========================= */
+
+/* ============================ FOOTER ============================ */
+footer{
+    border-top: 1px solid #eee;
+    color: #535353;
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+footer ul li{
+    float: left;
+    margin-right: 20px;
+}
+
+footer a:hover{
+    border-bottom: 1px solid #ED89BB;
+    padding-bottom: 2px;
+}
+/* ========================== end FOOTER ========================== */
+
+/* =========================== SUBMENUS =========================== */
+.submenu_right, .submenu_left{
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: none;
+    min-width: 180px;
+    padding: 0 10px;
+    /*position: fixed;*/
+    position: absolute;
+}
+
+.submenu_right::before, .submenu_left::before{
+    background: transparent url(../images/icon_submenu_up.png) top left no-repeat;
+    content: '';
+    display: block;
+    height: 6px;
+    position: relative;
+    top: -6px;
+    width: 14px;
+    z-index: 1000;
+}
+
+.submenu_right::before{
+    float: right;
+    left: 8px;
+}
+
+.submenu_left::before{ left: -8px; }
+
+.submenu_right ul li, .submenu_left ul li{
+    border-bottom: 1px solid #eee;
+    padding: 12px 0;
+}
+
+.submenu_right ul li:last-child , .submenu_left ul li:last-child{
+    border: none;
+}
+
+.submenu_right ul li a, .submenu_left ul li a{
+    color: #545454;
+    display: block;
+}
+/* ========================= end SUBMENUS ========================= */
+
+/* =========================== ICONS =========================== */
+.icon{ padding-left: 24px; }
+
+.icon_user{ background: transparent url(../images/icon_user.png) center left no-repeat; }
+
+.icon_logout{ background: transparent url(../images/icon_logout.png) center left no-repeat; }
+/* ========================= end ICONS ========================= */
+
+/* ============================ TABS =========================== */
+ul.Tabs{
+    border-bottom: 1px solid #ddd;
+    height: 41px;
+    padding: 0 10px;
+    z-index: 1000;
+}
+
+ul.Tabs li{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    float: left;
+    margin-right: 5px;
+    min-width: 20px;
+}
+
+ul.Tabs li a{
+    color: #252D2F;
+    display: inline-block;
+    padding: 10px 14px;
+}
+
+ul.Tabs li a.selected{
+    border-bottom: 2px solid #fff;
+    color: #E43B8E;
+}
+
+ul.Tabs li a[href="#mis_campanas"], ul.Tabs li a[href="status_campanas"], ul.Tabs li a[href="#nueva_campana"]{
+    text-overflow:inherit;
+    overflow:visible;
+}
+
+ul.Tabs li a[href="#mis_campanas"]{
+    width: 96px !important;
+    max-width: 96px !important;
+}
+
+ul.Tabs li a[href="status_campanas"]{
+    width: 166px !important;
+    max-width: 166px !important;
+}
+
+ul.Tabs li a[href="#nueva_campana"]{
+    background: url("../images/icon_plus.png") no-repeat scroll 14px center #FFFFFF;
+    max-width: 165px !important;
+    padding-left: 39px !important;
+    width: 165px !important;
+}
+
+ul.Tabs li a.nowrap{
+    overflow:hidden;
+    padding: 10px 14px 6px !important;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+ul.Tabs li .closeTab{
+    float: right;
+    margin-right: 14px;
+    margin-top: 9px;
+}
+
+.contenainer_tabs{
+    border: 1px solid #ddd;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top: none;
+    clear: both;
+    overflow: hidden;
+    padding: 20px 10px;
+}
+/* ========================== end TABS ========================= */
+
+/* ============================ TABLES ============================ */
+table.dataTable{
+    margin-bottom: 20px;
+}
+
+table.dataTable tr td, table.dataTable tr th{
+    padding: 8px;
+}
+
+table.dataTable thead th{
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+table.dataTable tr.odd, table.dataTable tr.odd td.sorting_1{
+    background-color: #eee;
+}
+
+table.dataTable td.dataTables_empty, table.dataTable even, table.dataTable tr.even td.sorting_1{
+    background-color: #fff;
+}
+
+table.dataTable tbody tr:hover td, table.dataTable tbody tr:hover td.sorting_1{
+    background-color: #FDECF4;
+}
+
+table.dataTable tfoot tr td{
+    font-weight: bold !important;
+}
+
+.dataTables_info{
+    font-weight: bold;
+    padding: 20px 0 0;
+}
+
+.toolbar{
+    float: left;
+    margin-top: 3px;
+}
+
+.dataTables_paginate{
+    float: none !important;
+    text-align: center !important;
+}
+
+.dataTables_paginate a.paginate_button, .dataTables_paginate a.paginate_active{
+    background-color: #eee;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    color: #545454;
+}
+
+.dataTables_paginate a.paginate_active{
+    background-color: #E43B8E;
+    color: #fff !important;
+}
+
+.dataTables_paginate a.paginate_button_disabled, .dataTables_paginate a.paginate_button_disabled.paginate_active{
+    background-color: #f7f7f7 !important;
+    color: #d7d7d7 !important;
+    cursor: no-drop !important;
+}
+
+.dataTables_wrapper label{
+    display: inline !important;
+    margin: 0 !important;
+    width: auto !important;
+    font-size: 14px;
+}
+
+.dataTables_length{
+    float: left;
+    display: inline-table;
+}
+
+.dataTables_filter{
+    float: right;
+    display: inline-table;
+    padding: 0 0 5px !important;
+}
+
+.dataTables_filter label input[type="text"]{
+    padding: 4px 3px !important;
+}
+
+.dataTables_wrapper .header{
+    background-color: #eee;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding: 5px;
+}
+/* ========================== end TABLES ========================== */
+
+/* ============================ LOGIN ============================= */
+#form_login{
+    margin-top: 20px;
+}
+
+#form_login input[type="text"],
+#form_login input[type="password"],
+#form_login input[type="submit"]{
+    padding: 12px !important;
+    width: 250px !important;
+}
+
+#form_login input[type="submit"]{
+    background-color: #E43B8E !important;
+    border: none !important;
+    color: #fff !important;
+    cursor: pointer;
+    letter-spacing: 1px;
+    text-transform: uppercase !important;
+    font-size: 0.8em !important;
+    font-weight: bold !important;
+    width: 274px !important;
+}
+
+#form_login input[type="submit"]:hover{
+    background-color: #E01F80 !important;
+}
+
+input:-webkit-autofill {
+    background-color: #fff;
+}
+/* ========================== end LOGIN =========================== */
+
+/* =========================== REGISTER =========================== */
+#form_register input[type="submit"]{
+    background-color: #E43B8E !important;
+    border: none !important;
+    color: #fff !important;
+    cursor: pointer;
+    letter-spacing: 1px;
+    text-transform: uppercase !important;
+    font-size: 0.8em !important;
+    font-weight: bold !important;
+    padding: 8px 25px;
+    width: 274px !important;
+}
+
+#form_register input[type="submit"]:hover{
+    background-color: #E01F80 !important;
+}
+/* ========================= end REGISTER ========================= */
+
+/* =========================== CAMPANAS =========================== */
+#pasos {
+    border-bottom: 1px solid #ddd;
+    color: #ddd;
+    font: normal bold 15px/15px Arial,Helvetica,sans-serif;
+    margin: 0 0 20px;
+    padding: 0 0 10px;
+}
+
+#pasos span {
+    margin: 0 20px 0 0;
+}
+
+#pasos span.activo {
+    color: #000;
+}
+
+.item_tipo_campania, .item_mas_tipos{
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    font: bold normal 15px Arial, Helvetica, sans-serif;
+    padding: 15px 10px;
+}
+
+.item_tipo_campania:hover{
+    background: #FDECF4 url(../images/icon_right_arrow.png) center right no-repeat;
+}
+
+.item_tipo_campania:first-of-type, .item_mas_tipos:first-of-type{
+    border-top: 1px solid #ddd;
+}
+
+.item_mas_tipos .item_tipo_campania{
+    display: none;
+    padding: 15px 10px 15px 30px;
+}
+
+.item_mas_tipos .item_tipo_campania:first-of-type{
+    margin-top: 15px;
+}
+
+.item_mas_tipos:hover{
+    background: #FDECF4 url(../images/icon_bottom_arrow.png) center right no-repeat;
+}
+/* ========================= end CAMPANAS ========================= */
+
+/* ========================= FORMULARIOS ========================== */
+.okText{
+    color: green;
+}
+
+.errorText{
+    color: red;
+}
+
+.error{
+    border: 1px solid red;
+    color: red;
+}
+
+/* ESTO HAY QUE ELIMINAR TODO!!!!!!!!!! :@ */
+label{
+    /*float: left;*/
+    font-weight: bold;
+    display: inline-block;
+    margin: 0 20px 5px 0;
+    padding-top: 3px;
+    text-align: right;
+    width: 160px;
+}
+
+input.button_new{
+    background:#ddd url('../images/background_button.png') top left repeat-x;
+    color: #333;
+    border: 1px solid #C7C7C7;
+    padding: 3px 8px;
+    border-radius: 3px; /* El estÃ¡ndar.*/
+    cursor:pointer;
+}
+
+input.button_new:hover{
+    border: 1px solid #aaa;
+}
+
+a.button_new{
+    background: url(../images/background_button.png) repeat-x scroll left top #DDD;
+    border: 1px solid #C7C7C7;
+    border-radius: 3px;
+    color: #333333;
+    cursor: pointer;
+    margin-right: 10px;
+    padding: 3px 8px;
+}
+
+.button_bar{
+    background-color: #EEE;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 8px 5px;
+}
+
+input.superButton{
+    font-weight: bold;
+    padding: 6px 16px;
+    background-color: #ddd;
+}
+
+label.error {
+    color:red;
+    padding-left: 20px;
+}
+
+input.error{
+    border-color: #FF9F9F;
+}
+
+/*
+input,
+select{
+    border: 1px solid #C7C7C7;
+    border-radius: 3px;
+    color: #333;
+    padding: 3px;
+}
+*/
+input,
+select{
+    padding: 4px 6px;
+    color: #555555;
+    vertical-align: middle;
+    border-radius: 3px;
+
+    background-color: #ffffff;
+    border: 1px solid #C1C5C8;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+    transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+
+input:focus,
+select:focus{
+    border-color: #ED89BB;
+    outline: 0;
+    outline: thin dotted \9;
+
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 2px rgba(237, 113, 187, 0.8);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 2px rgba(237, 113, 187, 0.8);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 2px rgba(237, 113, 187, 0.8);
+}
+/* ======================= end FORMULARIOS ======================== */
+#zenbox_tab{
+    border-radius: 5px 0 0 5px !important;
+    background: #EA3086 url('../images/sobre.png') center center no-repeat !important;
+    width: 40px !important;
+    height: 40px !important;
+    top: 50% !important;
+}
+
+#zenbox_tab img{
+    display: none !important;
+}
